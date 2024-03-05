@@ -8,6 +8,9 @@
     "doc": "docs"
   },
   "scripts": {
+    "main": "build/index.js",
+    "start": "npm run compile && electron",
+    "compile": "tsc && copyfiles -f src/index.html build",
     "preinit": "npm i --force",
     "preinit:main": "tsc  main.ts -m commonjs",
     ".": "node support.cjs && tsc main.ts -m commonjs && node support.cjs && node main.cjs",
@@ -102,6 +105,7 @@
     "check-for-leaks": "^1.2.1",
     "dotenv": "^16.3.1",
     "dotenv-safe": "^9.0.0",
+    "electron": "^29.1.0",
     "eslint": "^8.51.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin": "^1.0.1",
@@ -115,8 +119,8 @@
     "inquirer": "^9.2.11",
     "lint": "^1.1.2",
     "lint-staged": "^15.0.1",
-    "markdownlint-cli2": "^0.12.1",
     "markdownlint": "^0.33.0",
+    "markdownlint-cli2": "^0.12.1",
     "minimist": "^1.2.8",
     "mocha": "^10.2.0",
     "prettier": "^3.0.3",
@@ -131,6 +135,7 @@
     "url": "^0.11.3"
   },
   "dependencies": {
-    "@npmcli/package-json": "^5.0.0"
+    "@npmcli/package-json": "^5.0.0",
+    "copyfiles": "^2.4.1"
   }
 }
