@@ -93,20 +93,20 @@ a:hover::after {
 
 .bot{
   position: absolute;
-  top: 50vh;
-  left: 105vh;
+  top: 49vh;
+  left: 102vh;
 }
 
 .right_1{
   position: absolute;
   top: 0vh;
-  left: 165vh;
+  left: 162.5vh;
 }
 
 .right_2{
   position: absolute;
-  top: 76vh;
-  left: -9vh;
+  top: 74.5vh;
+  left: -10vh;
 }
 
 .familjen-grotesk{
