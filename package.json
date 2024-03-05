@@ -8,9 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "main": "build/index.js",
-    "start": "npm run compile && electron",
-    "compile": "tsc && copyfiles -f src/index.html build",
+    "start": "electron .",
     "preinit": "npm i --force",
     "preinit:main": "tsc  main.ts -m commonjs",
     ".": "node support.cjs && tsc main.ts -m commonjs && node support.cjs && node main.cjs",
