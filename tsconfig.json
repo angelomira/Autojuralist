@@ -13,7 +13,7 @@
             "dom",
             "dom.iterable"
         ],
-		"outDir": "out",
+		"outDir": "./build",
 		"baseUrl": "./",
 		"incremental": true,
 		"moduleResolution": "node",
