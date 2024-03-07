@@ -7,17 +7,63 @@ body {
   margin: 0;
 }
 
+.text-uppercase-btn {
+  color: white; /* цвет текста - белый */
+  padding: 20px; /* добавляем внутренний отступ для улучшенного визуального отображения */
+  /*margin: 10px; /* установка внешних отступов */
+  align-items: center; /* выравнивание текста по центру */
+  text-transform: uppercase; /* Применяем стиль капсом */
+  /*display: flex; /* Устанавливаем отображение в виде колонны */
+  flex-direction: column; /* Располагаем текст в колонну */
+  font-size: 350%;
+  position: absolute;
+}
+
 .text-uppercase {
   list-style-type: none; /* убираем маркеры списка */
   text-decoration: none; /* убираем стандартное подчеркивание ссылки */
   color: white; /* цвет текста - белый */
   padding: 25px; /* добавляем внутренний отступ для улучшенного визуального отображения */
   /*margin: 10px; /* установка внешних отступов */
-  text-align: center; /* выравнивание текста по центру */
+  align-items: center; /* выравнивание текста по центру */
   text-transform: uppercase; /* Применяем стиль капсом */
   display: flex; /* Устанавливаем отображение в виде колонны */
   flex-direction: column; /* Располагаем текст в колонну */
-  font-size: 150%;
+  font-size: 350%;
+	border: none;
+  font: inherit;
+}
+
+
+.text-uppercase-name-str {
+  list-style-type: none; /* убираем маркеры списка */
+  text-decoration: none; /* убираем стандартное подчеркивание ссылки */
+  color: white; /* цвет текста - белый */
+  padding: 25px; /* добавляем внутренний отступ для улучшенного визуального отображения */
+  /*margin: 10px; /* установка внешних отступов */
+  align-items: center; /* выравнивание текста по центру */
+  text-transform: uppercase; /* Применяем стиль капсом */
+  display: flex; /* Устанавливаем отображение в виде колонны */
+  flex-direction: column; /* Располагаем текст в колонну */
+  font-size: 350%;
+  margin-top: -40%;
+	border: none;
+  font: inherit;
+  
+}
+
+input.transparent-input {
+  padding-top: 15%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none; /* Убирает обводку при фокусировке */
+}
+
+/* Стиль для фокусировки на поле input */
+input.transparent-input:focus {
+  border-bottom: 1px solid white;
 }
 
 /*
@@ -66,6 +112,44 @@ a:hover::after {
   clip-path: polygon(5% 0, 95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%);
 }
 */
+.animated-text-1 {
+  background:
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.animated-text-1:hover {
+  --d: 20px;
+  font-size: 2.5em;
+}
+
+.animated-text-btn {
+  background:
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.animated-text-btn:hover {
+  --d: 20px;
+}
+
+
 .animated-text {
   background:
     linear-gradient(currentColor 0 0) 0 0,
@@ -82,7 +166,7 @@ a:hover::after {
 }
 .animated-text:hover {
   --d: 20px;
-  font-size: 2.1em;
+  font-size: 600%;
 }
 
 .logo{
@@ -100,18 +184,38 @@ a:hover::after {
 .right_1{
   position: absolute;
   top: 0vh;
-  left: 162.5vh;
+  left: 162.2vh;
 }
 
 .right_2{
   position: absolute;
   top: 74.5vh;
-  left: -10vh;
+  left: -9.7vh;
+}
+
+.familjen-grotesk-logo{
+  font-family: "Familjen Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  color: white;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 350%;
 }
 
 .familjen-grotesk{
   font-family: "Familjen Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
+  color: white;
   font-style: normal;
+  font-size: 150%;
+}
+
+.familjen-grotesk-name-str{
+  font-family: "Familjen Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  color: white;
+  font-style: normal;
+  font-size: 250%;
 }

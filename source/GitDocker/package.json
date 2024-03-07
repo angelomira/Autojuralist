@@ -43,6 +43,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "electron-router": "^0.5.1",
     "electron-squirrel-startup": "^1.0.0"
   }
 }
