@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow } from 'electron';
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
 
@@ -6,17 +6,22 @@ if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
+//let mainWindow: BrowserWindow;
+
 const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
-    height: 580,
-    width: 950,
-    resizable: true,
+    height: 720,
+    width: 1080,
+    resizable: false,
     webPreferences: {
+      nodeIntegration: true,
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
   });
+  //mainWindow.loadFile('src/index.html') 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
   mainWindow.webContents.openDevTools();
+  
 };
 
 app.on('ready', createWindow);
@@ -32,24 +37,3 @@ app.on('activate', () => {
     createWindow();
   }
 });
-/*
-ipcMain.on('buttonClicked', (event, data) => {
-  function MenuClick() {
-    document.getElementById('container').style.display = 'none';
-    document.getElementById('container_menu').style.display = 'block';
-  }
-  
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-      if (document.getElementById('container_menu').style.display === 'block') {
-        document.getElementById('container_menu').style.display = 'none';
-        document.getElementById('container_login').style.display = 'block';
-      } else {
-        document.getElementById('container').style.display = 'block';
-        document.getElementById('container_menu').style.display = 'none';
-      }
-    }
-  });
-  console.log('Button clicked with data:', data);
-});
-*/
